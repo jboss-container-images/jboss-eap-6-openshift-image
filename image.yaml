@@ -1,4 +1,5 @@
 name: "jboss-eap-6/eap64-openshift"
+description: "Red Hat JBoss Enterprise Application Platform 6.4 OpenShift container image"
 version: "1.6"
 from: "jboss-eap-6/eap64:latest"
 user: 185
