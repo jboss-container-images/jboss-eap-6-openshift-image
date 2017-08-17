@@ -25,6 +25,8 @@ envs:
       value: "true"
     - name: AB_JOLOKIA_HTTPS
       value: "true"
+    - name: "DEFAULT_ADMIN_USERNAME"
+      value: "eapadmin"
     - name: "OPENSHIFT_KUBE_PING_NAMESPACE"
       example: "myproject"
       description: "Clustering project namespace."
@@ -162,6 +164,9 @@ envs:
     - name: "PROBE_DISABLE_BOOT_ERRORS_CHECK"
       example: "true"
       description: Disable the boot errors check in the probes.
+    - name: "ENABLE_ACCESS_LOG"
+      example: "true"
+      description: Enable the Access Log.
 ports:
     - value: 8443
     - value: 8778
