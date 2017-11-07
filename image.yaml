@@ -237,12 +237,12 @@ artifacts:
       md5: d0c70b9b2da1f02473d52f59d1d14b0b
     - path: hawkular-javaagent-1.0.0.CR5-redhat-1-shaded.jar
       md5: f5d3e0220e10c706ef86af84771cf74e
-    - path: rh-sso-7.0.0-eap6-adapter.zip
+    - path: rh-sso-7.1.0-eap6-adapter.zip
       description: "Artifact is available on Customer Portal: https://access.redhat.com/jbossnetwork/restricted/softwareDetail.html?softwareId=44841&product=core.service.rhsso&version=7.0&downloadType=distributions"
-      md5: 6fd81306ea4297307dcc5f51712e5f95
-    - path: rh-sso-7.0.0-saml-eap6-adapter.zip
+      sha256: 27507943c1e43b630d68b725f5adb62a02292add95b31f4ce46507a7f7c21ee8
+    - path: rh-sso-7.1.2-saml-eap6-adapter.zip
       description: "Artifact is available on Customer Portal: https://access.redhat.com/jbossnetwork/restricted/softwareDetail.html?softwareId=44811&product=core.service.rhsso&version=7.0&downloadType=distributions"
-      md5: 3b953c114dd09f86e71e18cd57d8af56
+      sha256: 65002ff52457d15faa7c38008e886e43c0a40bfbef3b0875b9e2098f4140355d
     - path: tomcat-7-valves-1.0.3.Final-redhat-1.jar
       md5: f286f6748e6d134ed0a9dadd8320ecd2
 run:
