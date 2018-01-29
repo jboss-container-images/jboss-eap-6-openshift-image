@@ -2,7 +2,7 @@ schema_version: 1
 
 name: "jboss-eap-6/eap64-openshift"
 description: "Red Hat JBoss Enterprise Application Platform 6.4 OpenShift container image"
-version: "1.6"
+version: "1.7"
 from: "jboss-eap-6/eap64:latest"
 labels:
     - name: "io.k8s.description"
@@ -28,12 +28,6 @@ envs:
       value: "true"
     - name: "DEFAULT_ADMIN_USERNAME"
       value: "eapadmin"
-    - name: "OPENSHIFT_KUBE_PING_NAMESPACE"
-      example: "myproject"
-      description: "Clustering project namespace."
-    - name: "OPENSHIFT_KUBE_PING_LABELS"
-      example: "application=eap-app"
-      description: "Clustering labels selector."
     - name: "JBOSS_MODULES_SYSTEM_PKGS_APPEND"
       example: "org.jboss.byteman"
       description: "Comma-separated list of package names that will be appended to the JBOSS_MODULES_SYSTEM_PKGS environment variable."
@@ -174,9 +168,10 @@ ports:
     - value: 8778
 modules:
       repositories:
-          - git:
+          - name: cct_module
+            git:
                   url: https://github.com/jboss-openshift/cct_module.git
-                  ref: sprint-12
+                  ref: sprint-13
       install:
           - name: dynamic-resources
           - name: s2i-common
@@ -225,12 +220,6 @@ artifacts:
       md5: 569870f975deeeb6691fcb9bc02a9555
     - path: jboss-logmanager-ext-1.0.0.Alpha2-redhat-1.jar
       md5: 7c743e35463db5f55f415dd666d705c5
-    - path: openshift-ping-common-1.1.4.Final-redhat-1.jar
-      md5: b01126ed440b854653696b86c5eba325
-    - path: openshift-ping-dns-1.1.4.Final-redhat-1.jar
-      md5: 7e34b050c4e7fe2afbd3893a1fa4e558
-    - path: openshift-ping-kube-1.1.4.Final-redhat-1.jar
-      md5: 7681e42eda03d9ad990fbe39c96677a4
     - path: oauth-20100527.jar
       md5: 91c7c70579f95b7ddee95b2143a49b41
     - url: https://maven.repository.redhat.com/ga/org/apache/activemq/activemq-rar/5.11.0.redhat-630262/activemq-rar-5.11.0.redhat-630262.rar
@@ -252,4 +241,4 @@ run:
 osbs:
       repository:
             name: jboss-eap-6-docker
-            branch: ce-1.6-openshift-eap-6.4-jdk-8-rhel-7
+            branch: ce-1.7-openshift-eap-6.4-jdk-8-rhel-7
