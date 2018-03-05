@@ -5,6 +5,8 @@ description: "Red Hat JBoss Enterprise Application Platform 6.4 OpenShift contai
 version: "1.8"
 from: "jboss-eap-6/eap64:latest"
 labels:
+    - name: "com.redhat.component"
+      value: "jboss-eap-6-eap64-openshift-container"
     - name: "io.k8s.description"
       value: "Platform for building and running JavaEE applications on JBoss EAP 6.4"
     - name: "io.k8s.display-name"
@@ -155,5 +157,5 @@ run:
           - "/opt/eap/bin/openshift-launch.sh"
 osbs:
       repository:
-            name: jboss-eap-6-docker
+            name: containers/jboss-eap-6
             branch: jb-eap-6.4-openshift-rhel-7
