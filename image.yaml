@@ -134,23 +134,7 @@ packages:
           - python-requests
           - python-enum34
           - PyYAML
-artifacts:
-    - path: javax.json-1.0.4.jar
-      md5: 569870f975deeeb6691fcb9bc02a9555
-    - path: jboss-logmanager-ext-1.0.0.Alpha2-redhat-1.jar
-      md5: 7c743e35463db5f55f415dd666d705c5
-    - path: oauth-20100527.jar
-      md5: 91c7c70579f95b7ddee95b2143a49b41
-    - path: activemq-rar-5.11.0.redhat-630329.rar
-      md5: 76ed338d86bb3dbba2d4bd48daff7dbb
-    - path: rh-sso-7.1.0-eap6-adapter.zip
-      description: "Artifact is available on Customer Portal: https://access.redhat.com/jbossnetwork/restricted/softwareDetail.html?softwareId=44841&product=core.service.rhsso&version=7.0&downloadType=distributions"
-      sha256: 27507943c1e43b630d68b725f5adb62a02292add95b31f4ce46507a7f7c21ee8
-    - path: rh-sso-7.1.2-saml-eap6-adapter.zip
-      description: "Artifact is available on Customer Portal: https://access.redhat.com/jbossnetwork/restricted/softwareDetail.html?softwareId=44811&product=core.service.rhsso&version=7.0&downloadType=distributions"
-      sha256: 65002ff52457d15faa7c38008e886e43c0a40bfbef3b0875b9e2098f4140355d
-    - path: tomcat-7-valves-1.0.3.Final-redhat-1.jar
-      md5: f286f6748e6d134ed0a9dadd8320ecd2
+
 run:
       user: 185
       cmd:
