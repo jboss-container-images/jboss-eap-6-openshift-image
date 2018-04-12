@@ -2,7 +2,7 @@ schema_version: 1
 
 name: "jboss-eap-6/eap64-openshift"
 description: "Red Hat JBoss Enterprise Application Platform 6.4 OpenShift container image"
-version: "1.8"
+version: "1.9"
 from: "jboss-eap-6/eap64:latest"
 labels:
     - name: "com.redhat.component"
