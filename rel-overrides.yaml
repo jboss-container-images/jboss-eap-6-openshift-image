@@ -1,0 +1,12 @@
+schema_version: 1
+modules:
+      repositories:
+          - name: cct_module
+            git:
+                  url: https://github.com/jboss-openshift/cct_module.git
+                  ref: sprint-16
+osbs:
+      repository:
+            name: containers/jboss-eap-6
+            branch: jb-eap-6.4-openshift-rhel-7
+
