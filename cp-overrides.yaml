@@ -1,0 +1,6 @@
+from: "jboss-eap-6/eap64:cp"
+ 
+osbs:
+       repository:
+           name: containers/jboss-eap-6
+           branch: jb-eap-6.4-openshift-cp-rhel-7
