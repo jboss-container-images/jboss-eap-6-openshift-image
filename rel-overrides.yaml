@@ -5,10 +5,6 @@ modules:
             git:
                   url: https://github.com/jboss-openshift/cct_module.git
                   ref: sprint-16
-          - name: jboss-eap-modules
-            git:
-                  url: https://github.com/jboss-container-images/jboss-eap-modules
-                  ref: master
 osbs:
       repository:
             name: containers/jboss-eap-6
