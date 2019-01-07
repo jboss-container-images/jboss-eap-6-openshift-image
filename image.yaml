@@ -62,6 +62,8 @@ modules:
           - name: openshift-layer
           - name: openshift-passwd
           - name: os-logging
+          - name: jboss.container.eap.prometheus.config
+            version: '6.4'
 osbs:
       repository:
             name: containers/jboss-eap-6
