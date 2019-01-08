@@ -9,7 +9,10 @@ modules:
             git:
                   url: https://github.com/jboss-container-images/jboss-eap-modules
                   ref: master
-
+          - name: jboss-eap-6-image
+            git:
+                  url: https://github.com/jboss-container-images/jboss-eap-6-image.git
+                  ref: eap64-dev
 osbs:
       repository:
             name: containers/jboss-eap-6

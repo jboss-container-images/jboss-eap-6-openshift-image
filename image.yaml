@@ -3,7 +3,7 @@ schema_version: 1
 name: "jboss-eap-6/eap64-openshift"
 description: "Red Hat JBoss Enterprise Application Platform 6.4 OpenShift container image"
 version: "1.9"
-from: "jboss-eap-6/eap64:latest"
+from: "rhel7:7-released"
 labels:
     - name: "com.redhat.component"
       value: "jboss-eap-6-eap64-openshift-container"
@@ -33,7 +33,14 @@ modules:
             git:
                   url: https://github.com/jboss-container-images/jboss-eap-modules.git
                   ref: master
+          - name: jboss-eap-6-image
+            git:
+                  url: https://github.com/jboss-container-images/jboss-eap-6-image.git
+                  ref: eap64
       install:
+          - name: jboss.container.openjdk.jdk
+            version: "8"
+          - name: eap-6.4-latest
           - name: dynamic-resources
           - name: s2i-common
           - name: java-alternatives
@@ -64,7 +71,19 @@ modules:
           - name: os-logging
           - name: jboss.container.eap.prometheus.config
             version: '6.4'
+packages:
+      content_sets_file: content_sets.yml
+      install:
+          - python-requests
+          - python-enum34
+          - PyYAML
+run:
+      user: 185
+      cmd:
+          - "/opt/eap/bin/openshift-launch.sh"
 osbs:
+      configuration:
+            container_file: container.yaml
       repository:
             name: containers/jboss-eap-6
             branch: jb-eap-6.4-openshift-rhel-7
