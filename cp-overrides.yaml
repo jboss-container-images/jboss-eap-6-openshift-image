@@ -11,7 +11,7 @@ modules:
           - name: jboss-eap-6-image
             git:
                   url: https://github.com/jboss-container-images/jboss-eap-6-image.git
-                  ref: eap64-cp
+                  ref: EAP64_22_CR1
 osbs:
       repository:
             name: containers/jboss-eap-6
