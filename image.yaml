@@ -17,6 +17,9 @@ labels:
       value: "builder,javaee,eap,eap6"
     - name: "io.openshift.s2i.scripts-url"
       value: "image:///usr/local/s2i"
+    - name: "maintainer"
+      value: "Red Hat"
+
 envs:
     - name: SCRIPT_DEBUG
       description: If set to true, ensurses that the bash scripts are executed with the -x option, printing the commands and their arguments as they are executed.
